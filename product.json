@@ -1,0 +1,305 @@
+[
+  {
+    "id": 1,
+    "title": "Nordic Chair",
+    "price": 500,
+    "image": "images/product-1.png"
+  },
+  {
+    "id": 2,
+    "title": "Kruzo Aero Chair",
+    "price": 780,
+    "image": "images/product-2.png"
+  },
+  {
+    "id": 3,
+    "title": "Ergonomic Chair",
+    "price": 430,
+    "image": "images/product-3.png"
+  },
+  {
+    "id": 4,
+    "title": "Hexagon Coffee Table",
+    "price": 999,
+    "image": "images/HexagonCoffeTable.png"
+  },
+  {
+    "id": 5,
+    "title": "Rounded Coffee Table",
+    "price": 720,
+    "image": "images/RoundCoffeeTable.png"
+  },
+  {
+    "id": 6,
+    "title": "Square Coffee Table",
+    "price": 1100,
+    "image": "images/SquareCoffeTable.png"
+  },
+  {
+    "id": 7,
+    "title": "Brown Long Sofa",
+    "price": 1199,
+    "image": "images/BrownSingleSofa.png"
+  },
+  {
+    "id": 8,
+    "title": "Brown Wodden Sofa",
+    "price": 1229,
+    "image": "images/BrownSofa.png"
+  },
+  {
+    "id": 9,
+    "title": "Clean Style Wardrobe",
+    "price": 1459,
+    "image": "images/CleanStylewardrobe.png"
+  },
+  {
+    "id": 10,
+    "title": "Clean Stylish Office Chair",
+    "price": 1290,
+    "image": "images/cleanstylishofficechair.png"
+  },
+  {
+    "id": 11,
+    "title": "Two Seater Couch",
+    "price": 999,
+    "image": "images/couch.png"
+  },
+  {
+    "id": 12,
+    "title": "Emrald Sofa",
+    "price": 899,
+    "image": "images/EmraldSofa.png"
+  },
+  {
+    "id": 13,
+    "title": "Fancy Grey Office Chair",
+    "price": 599,
+    "image": "images/Fancygreyofficechair.png"
+  },
+  {
+    "id": 14,
+    "title": "Kids Playing Table",
+    "price": 679,
+    "image": "images/kidsplayingtable.png"
+  },
+  {
+    "id": 15,
+    "title": "Minimilistic Style King Size Bed",
+    "price": 1999,
+    "image": "images/Minimilisticstylekingsizebed.png"
+  },
+  {
+    "id": 16,
+    "title": "Minimilstic Study Table",
+    "price": 899,
+    "image": "images/MinimilsticStudytable.png"
+  },
+  {
+    "id": 17,
+    "title": "Modern Beige Wardrobe",
+    "price": 879,
+    "image": "images/Modernbeigewardrobe.png"
+  },
+  {
+    "id": 18,
+    "title": "Modern Style Dining Table",
+    "price": 1599,
+    "image": "images/modernstylediningtable.png"
+  },
+  {
+    "id": 19,
+    "title": "Modern Style Study Table",
+    "price": 1199,
+    "image": "images/modernstylestudytable.png"
+  },
+  {
+    "id": 20,
+    "title": "Modern Style Dressing Table",
+    "price": 1159,
+    "image": "images/Modernstylishdressingtables.png"
+  },
+  {
+    "id": 21,
+    "title": "Multiple Door Wardrobe",
+    "price": 2239,
+    "image": "images/Multipledoorwardrobe.png"
+  },
+  {
+    "id": 22,
+    "title": "Mushroom Chair For Kids",
+    "price": 999,
+    "image": "images/Mushroomchairforkids.png"
+  },
+  {
+    "id": 23,
+    "title": "Round Shape Dining Table",
+    "price": 999,
+    "image": "images/Roundshapediningtable.png"
+  },
+  {
+    "id": 24,
+    "title": "Simple Comfortable Office Chair",
+    "price": 849,
+    "image": "images/SimpleComfortableofficechair.png"
+  },
+  {
+    "id": 25,
+    "title": "Simple Single Bed",
+    "price": 1975,
+    "image": "images/Simplesinglepersonbed.png"
+  },
+  {
+    "id": 26,
+    "title": "Simple Style Crib",
+    "price": 1299,
+    "image": "images/Simplestylecrib.png"
+  },
+  {
+    "id": 27,
+    "title": "Simple White Queen Size Bed",
+    "price": 1350,
+    "image": "images/Simplewhitequeensizebed.png"
+  },
+  {
+    "id": 28,
+    "title": "Simple White Sofa",
+    "price": 950,
+    "image": "images/Simplewhitesofa.png"
+  },
+  {
+    "id": 29,
+    "title": "Single Person Wardrobe",
+    "price": 1300,
+    "image": "images/singlepersonwardrobe.png"
+  },
+  {
+    "id": 30,
+    "title": "Sea-Green Long Sofa",
+    "price": 1209,
+    "image": "images/sofa.png"
+  },
+  {
+    "id": 31,
+    "title": "Stylish King Size Bed",
+    "price": 2079,
+    "image": "images/StylishKingsizebed.png"
+  },
+  {
+    "id": 32,
+    "title": "Mountain Bike 331-Grey",
+    "price": 1190,
+    "image": "images/SportsBicycle1.png"
+  },
+  {
+    "id": 33,
+    "title": "Mountain Bike 332-Black",
+    "price": 1190,
+    "image": "images/bicycle2.png"
+  },
+  {
+    "id": 34,
+    "title": "Book Holder Table",
+    "price": 599,
+    "image": "images/bookholdertablehomedecor.png"
+  },
+  {
+    "id": 35,
+    "title": "Cactus Clock",
+    "price": 499,
+    "image": "images/cactusclockhomedecor.png"
+  },
+  {
+    "id": 36,
+    "title": "Fancy Calender",
+    "price": 299,
+    "image": "images/Calenderhomedecor.png"
+  },
+  {
+    "id": 37,
+    "title": "Chandelier 0011",
+    "price": 1999,
+    "image": "images/chandelier1.png"
+  },
+  {
+    "id": 38,
+    "title": "Chandelier 0012",
+    "price": 1999,
+    "image": "images/chandelier2.png"
+  },
+  {
+    "id": 39,
+    "title": "Chandelier 0013",
+    "price": 1999,
+    "image": "images/chandelier3.png"
+  },
+  {
+    "id": 40,
+    "title": "Dino Plant Pot",
+    "price": 199,
+    "image": "images/dinoHomedecor.png"
+  },
+  {
+    "id": 41,
+    "title": "Abstract Clock",
+    "price": 350,
+    "image": "images/Fancyclockhomedecor.png"
+  },
+  {
+    "id": 42,
+    "title": "Fancy Hanging Light 0011",
+    "price": 450,
+    "image": "images/fancylight1homedecor.png"
+  },
+  {
+    "id": 43,
+    "title": "Fancy Hanging Light 0012",
+    "price": 450,
+    "image": "images/fancylight2homedecor.png"
+  },
+  {
+    "id": 44,
+    "title": "Fancy Table",
+    "price": 599,
+    "image": "images/Fancytablehomedecor.png"
+  },
+  {
+    "id": 45,
+    "title": "Fancy Lamp",
+    "price": 250,
+    "image": "images/lamphomedecor.png"
+  },
+  {
+    "id": 46,
+    "title": "Orange Key Holder",
+    "price": 190,
+    "image": "images/Orangekeyholderhomedecor.png"
+  },
+  {
+    "id": 47,
+    "title": "Wine Bottle Holder",
+    "price": 290,
+    "image": "images/winebottleholderhomedecor.png"
+  }
+  ,
+  {
+    "id": 48,
+    "title": "Fancy wooden Shelf",
+    "price": 999,
+    "image": "images/woodenfancyitemholderhomedecor.png"
+  }
+    ,
+  {
+    "id": 49,
+    "title": "4K UHD LED Smart TV with Wi-Fi",
+    "price": 999,
+    "image": "images/Roku7.png"
+  }
+      ,
+  {
+    "id": 50,
+    "title": "LG Healthcare HDTV",
+    "price": 899,
+    "image": "images/LgHealthcare.png"
+  }
+]

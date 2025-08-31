@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+	<title>Fancy Lamp</title>
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background: #f9f9f9;
+			color: #333;
+		}
+
+		.pd-main {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			padding: 2rem;
+		}
+
+		.pd-images {
+			flex: 1.5;
+			min-width: 300px;
+		}
+
+		.pd-thumb-list {
+			display: flex;
+			gap: 0.5rem;
+			margin-top: 0.5rem;
+		}
+
+		.pd-thumb-list img {
+			width: 60px;
+			height: 60px;
+			object-fit: cover;
+			cursor: pointer;
+			border: 1px solid #ccc;
+		}
+
+		.pd-thumbnail img:hover {
+			border-color: #000;
+		}
+
+		.pd-gallery img {
+			width: 100%;
+			max-width: 500px;
+			border-radius: 8px;
+		}
+
+		.pd-details {
+			flex: 1;
+			min-width: 300px;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.pd-details h1 {
+			font-size: 2rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.pd-price {
+			font-size: 1.5rem;
+			color: #333;
+			font-weight: bold;
+		}
+
+		.pd-description {
+			color: #555;
+		}
+
+		.pd-container ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.pd-container ul li {
+			margin-bottom: 0.5rem;
+			display: flex;
+		}
+
+		.pd-container ul li strong {
+			width: 120px;
+		}
+
+		.btn-buy {
+			padding: 0.75rem 1.5rem;
+			font-size: 1rem;
+		}
+
+		.product-container {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1200px;
+			margin: 40px auto;
+			background: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+			gap: 30px;
+		}
+
+		/* LEFT SIDE - PRODUCT IMAGE */
+		.product-images {
+			flex: 1.5;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		.product-images img {
+			width: auto;
+			max-width: 700px;
+			/* 👈 BIGGER IMAGE */
+			height: auto;
+			border-radius: 10px;
+		}
+
+		/* RIGHT SIDE - PRODUCT DETAILS */
+		.product-details {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 20px;
+		}
+
+		.product-details h1 {
+			font-size: 28px;
+			margin: 0;
+		}
+
+		.price {
+			font-size: 22px;
+			font-weight: bold;
+			color: #5a67d8;
+		}
+
+		.short-desc {
+			font-size: 16px;
+			line-height: 1.6;
+			color: #555;
+		}
+
+		.buy-btn {
+			padding: 14px;
+			font-size: 16px;
+			background: #5a67d8;
+			color: #fff;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: background 0.3s;
+		}
+
+		.buy-btn:hover {
+			background: #434190;
+		}
+
+		/* DETAILED DESCRIPTION */
+		.detailed-desc {
+			max-width: 1200px;
+			margin: 30px auto;
+			padding: 20px;
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+			line-height: 1.7;
+		}
+
+		.detailed-desc h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		@media (max-width: 768px) {
+			.product-container {
+				flex-direction: column;
+				padding: 15px;
+			}
+
+			.product-images img {
+				max-width: 100%;
+				/* full width on mobile */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+		<div class="container">
+			<a class="navbar-brand" href="index.html">NHTANGO<span>.</span></a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li><a class="nav-link" href="shop.html">Shop All</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="furnitureDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Furniture
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="furnitureDropdown"
+							style="background-color: #6E5746; color: white;">
+							<li><a class="dropdown-item" href="chairs.html">Chairs</a></li>
+							<li><a class="dropdown-item" href="tables.html">Tables</a></li>
+							<li><a class="dropdown-item" href="beds.html">Beds</a></li>
+							<li><a class="dropdown-item" href="sofas.html">Sofas</a></li>
+							<li><a class="dropdown-item" href="wardrobes.html">Wardrobes</a></li>
+							<li><a class="dropdown-item" href="Kids.html">Kids</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="furnitureDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Sports
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="furnitureDropdown"
+							style="background-color: #6E5746; color: white;">
+							<li><a class="dropdown-item" href="bicycle.html">BiCycle</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="furnitureDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Others
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="furnitureDropdown"
+							style="background-color: #6E5746; color: white;">
+							<li><a class="dropdown-item" href="homedecor.html">Home Decor</a></li>
+							<li><a class="dropdown-item" href="Electronics.html">Electronics</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+						</ul>
+					</li>
+					<li><a class="nav-link" href="about.html">About Us</a></li>
+					<li><a class="nav-link" href="contact.html">Contact us</a></li>
+				</ul>
+
+				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+					<!-- <li><a class="nav-link" href="#"><img src="images/user.svg"></a></li> -->
+					<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	<!-- End Header/Navigation -->
+	<!-- PRODUCT MAIN SECTION -->
+	<div class="product-container">
+		<!-- LEFT: PRODUCT IMAGE -->
+		<div class="product-images">
+			<img src="images/lamphomedecor.png" alt="Product Image">
+		</div>
+
+		<!-- RIGHT: PRODUCT DETAILS -->
+		<!-- Details area -->
+		<div class="pd-details pd-container">
+			<h1>Fancy Lamp</h1>
+			<div class="pd-price">£250</div>
+			<p class="pd-description">
+				Brighten your home with this decorative fancy lamp. A blend of charm and soft lighting, it’s ideal for
+				bedside tables or cozy corners.
+			</p>
+			<!-- <ul>
+        <li><strong>Material:</strong> Solid wood / Leather</li>
+        <li><strong>Dimensions:</strong> 80cm x 75cm x 90cm</li>
+        <li><strong>Available:</strong> In stock</li>
+      </ul> -->
+			<button class="btn btn-primary btn-buy" data-id="45">Add to Cart</button>
+
+			<p class="text-muted mt-2"> FREE delivery & returns</p>
+		</div>
+		<!-- DETAILED DESCRIPTION -->
+		<!-- <div class="detailed-desc">
+    <h2>Product Details</h2>
+    <p>
+      This denim jacket is made from 100% organic cotton for a sustainable and durable wear. 
+      Featuring button closure, two chest pockets, and a modern slim cut. 
+      Designed to complement both casual and smart-casual looks. 
+    </p>
+    <ul>
+      <li>Material: 100% Organic Cotton</li>
+      <li>Fit: Slim</li>
+      <li>Color: Light Blue Wash</li>
+      <li>Care: Machine washable</li>
+    </ul>
+    <p>
+      Whether you're layering it over a hoodie or pairing it with a simple tee, 
+      this denim jacket is a wardrobe essential.
+    </p> -->
+	</div>
+	<!-- Start Testimonial Slider -->
+	<div class="testimonial-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 mx-auto text-center">
+					<h2 class="section-title">What Our Customer Thinks</h2>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="testimonial-slider-wrap text-center">
+
+						<div id="testimonial-nav">
+							<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+							<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+						</div>
+
+						<div class="testimonial-slider">
+
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;NHTANGO completely transformed my living room. The furniture
+													is stylish, comfortable, and feels like it was made just for my
+													space!&rdquo;</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="images/person_1.jpg" alt="Maria Jones" class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">Mark S.</h3>
+												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;I love how my home feels cozy yet elegant now. Every piece I
+													ordered has exceeded my expectations.&rdquo;</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">Emily W</h3>
+												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;I was amazed by the quality and attention to detail. Shopping
+													was easy, delivery was fast, and everything fits perfectly.&rdquo;
+												</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="images/person_2.jpg" alt="Maria Jones" class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">James R.</h3>
+												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;The customer support is fantastic! They helped me choose the
+													perfect furniture for my apartment, and I couldn’t be
+													happier.&rdquo;</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="images/person_4.jpg" alt="Maria Jones" class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">Sophia L</h3>
+												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;From the modern designs to the hassle-free returns, NHTANGO
+													makes furniture shopping a pleasure. Highly recommend!&rdquo;</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="images/person_3.jpg" alt="Maria Jones" class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">Daniel K.</h3>
+												<!-- <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span> -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Testimonial Slider -->
+
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="sofa-img">
+				<img src="images/BrownSofa.png" alt="Image" class="img-fluid">
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="subscription-form">
+						<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg"
+									alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+						<form action="#" class="row g-3">
+							<div class="col-auto">
+								<input type="text" class="form-control" placeholder="Enter your name">
+							</div>
+							<div class="col-auto">
+								<input type="email" class="form-control" placeholder="Enter your email">
+							</div>
+							<div class="col-auto">
+								<button class="btn btn-primary">
+									<span class="fa fa-paper-plane"></span>
+								</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row g-4 mb-4">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">NHTANGO<span>.</span></a></div>
+					<p class="mb-4">Our journey started with a simple vision: to make beautifully designed, high-quality
+						furniture accessible to every home. We wanted to create pieces that do more than just fill a
+						room—they bring warmth, character, and functionality into everyday living. With this vision,
+						NHTANGO was born.</p>
+
+					<!-- <ul class="list-unstyled custom-social">
+							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						</ul> -->
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="about.html">About us</a></li>
+								<!-- <li><a href="#">Services</a></li> -->
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="contact.html">Contact us</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="privacypolicy.html">Privacy Policiy</a></li>
+								<li><a href="Term&conditions.html">Terms & Conditions</a></li>
+								<!-- <li><a href="#">Live chat</a></li> -->
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="tables.html">Tabels</a></li>
+								<li><a href="chairs.html">Chairs</a></li>
+								<li><a href="sofas.html">Sofa</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">help.nhtango@gmail.com</a></li>
+								<li><a href="#">+44-123-456789</a></li>
+								<!-- <li><a href="#">Sofa</a></li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- <div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
+			<!-- </p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>  -->
+
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+
+	<script src="cart.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', async () => {
+			const addBtn = document.querySelector('.btn-buy');
+			if (!addBtn) return;
+
+			const productId = addBtn.dataset.id;
+			let product = null;
+
+			// Try to load from product.json
+			try {
+				const res = await fetch('product.json', { cache: 'no-store' });
+				const list = await res.json();
+				product = list.find(p => String(p.id) === String(productId));
+			} catch (e) {
+				// ignore (likely running from file://)
+			}
+
+			// Fallback: read from DOM
+			if (!product) {
+				const title = document.querySelector('.pd-details h1')?.textContent.trim() || 'Product';
+				const priceText = document.querySelector('.pd-price')?.textContent || '0';
+				const price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+				const image = document.querySelector('.product-images img')?.src || '';
+				product = { id: productId, title, price, image };
+			}
+
+			addBtn.addEventListener('click', () => {
+				Cart.add(product);
+				showAddedToast(product);
+			});
+
+			function showAddedToast(p) {
+				const toast = document.createElement('div');
+				toast.setAttribute('role', 'status');
+				toast.style.cssText = `
+      position:fixed; bottom:20px; right:20px;
+      background:#1f2937; color:#fff;
+      padding:14px 16px; border-radius:10px;
+      box-shadow:0 10px 20px rgba(0,0,0,.15);
+      display:flex; align-items:center; gap:12px; z-index:2147483647
+    `;
+				toast.innerHTML = `
+      <span>✅ Added <strong>${escapeHtml(p.title)}</strong> to cart.</span>
+      <button id="viewCartBtn" style="background:#fff;border:none;border-radius:8px;padding:6px 10px;cursor:pointer;">View cart</button>
+      <button id="closeToastBtn" style="background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;">Close</button>
+    `;
+				document.body.appendChild(toast);
+
+				toast.querySelector('#viewCartBtn').onclick = () => { window.location.href = 'cart.html'; };
+				toast.querySelector('#closeToastBtn').onclick = () => toast.remove();
+				setTimeout(() => { if (toast.isConnected) toast.remove(); }, 3000);
+			}
+
+			function escapeHtml(s) {
+				return s.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]));
+			}
+		});
+	</script>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>
